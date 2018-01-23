@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QtCore/qmath.h>
+#include <QObject>
 
 
 float uSrc; // Напряжение источника питания
@@ -35,6 +36,9 @@ void MainWindow::on_btnCalc_clicked()
         ui->lStatus->setText(tr("Напряжение диода выше напряжения источника!"));
     }
 
+    QString qResLed;
+    QString qResWatt;
+    QString qAbsRes;
     float fResLed = (uSrc - uLed) / ((float)iLed / 1000);
     float fResWatt = (qPow(iLed, 2) * fResLed) / 1000;
 
@@ -42,12 +46,12 @@ void MainWindow::on_btnCalc_clicked()
     if (fResWatt >= 1000)
     {
         fResWatt = fResWatt / 1000;
-        wattMul = "Вт";
+        wattMul = tr(" Вт");
     }
 
     else if (fResWatt < 1000)
     {
-        wattMul = "мВт";
+        wattMul = tr(" мВт");
     }
 
     iCalcRes = qCeil(fResLed);
@@ -63,11 +67,15 @@ void MainWindow::on_btnCalc_clicked()
     if (iAbsRes >= 1000)
     {
         iAbsRes = iAbsRes / 1000;
-        resMul = "кОм";
+        resMul = tr(" кОм");
     }
     else if (iAbsRes < 1000)
     {
-        resMul = "Ом";
+        resMul = tr(" Ом");
     }
+
+    ui->fResLedBox->setText(qResLed.setNum(fResLed) + resMul);
+    ui->iAbsResBox->setText(qAbsRes.setNum(iAbsRes) + resMul);
+    ui->wResWattBox->setText(qResWatt.setNum(fResWatt) + wattMul);
 
 }
