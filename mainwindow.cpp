@@ -34,8 +34,10 @@ void MainWindow::on_btnCalc_clicked()
     {
         ui->lStatus->setStyleSheet("QLabel { color : red; }");
         ui->lStatus->setText(tr("Напряжение диода выше напряжения источника!"));
+        return;
     }
 
+    ui->lStatus->setText("");
     QString qResLed;
     QString qResWatt;
     QString qAbsRes;

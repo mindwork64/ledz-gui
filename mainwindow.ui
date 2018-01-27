@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>390</height>
+    <width>570</width>
+    <height>470</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,25 +23,31 @@
    <widget class="QLabel" name="iSrc">
     <property name="geometry">
      <rect>
-      <x>158</x>
+      <x>150</x>
       <y>65</y>
-      <width>150</width>
-      <height>17</height>
+      <width>260</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Среднее напряжение светодиода&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
-     <string>Напряжение светодиода</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Напряжение светодиода (&lt;span style=&quot; font-weight:600; font-style:italic; color:#ee3638;&quot;&gt;Вольт&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>uLedBox</cstring>
     </property>
    </widget>
    <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
-      <x>-4</x>
+      <x>0</x>
       <y>130</y>
-      <width>481</width>
+      <width>570</width>
       <height>20</height>
      </rect>
     </property>
@@ -52,7 +58,7 @@
    <widget class="QLabel" name="rStd">
     <property name="geometry">
      <rect>
-      <x>96</x>
+      <x>199</x>
       <y>305</y>
       <width>211</width>
       <height>20</height>
@@ -61,28 +67,37 @@
     <property name="text">
      <string>Ближайшее стандартное значение</string>
     </property>
+    <property name="buddy">
+     <cstring>iAbsResBox</cstring>
+    </property>
    </widget>
    <widget class="QLabel" name="iLed">
     <property name="geometry">
      <rect>
-      <x>213</x>
+      <x>150</x>
       <y>95</y>
-      <width>91</width>
-      <height>17</height>
+      <width>260</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Максимальный ток на который расчитан светодиод&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
-     <string>Ток светодиода</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ток светодиода (&lt;span style=&quot; font-weight:600; font-style:italic; color:#3a52d9;&quot;&gt;миллиампер&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>iLedBox</cstring>
     </property>
    </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>307</x>
-      <y>-1</y>
+      <x>400</x>
+      <y>0</y>
       <width>20</width>
       <height>701</height>
      </rect>
@@ -94,7 +109,7 @@
    <widget class="QLabel" name="wResWatt">
     <property name="geometry">
      <rect>
-      <x>157</x>
+      <x>260</x>
       <y>335</y>
       <width>151</width>
       <height>17</height>
@@ -103,13 +118,16 @@
     <property name="text">
      <string>Номинальная мощность</string>
     </property>
+    <property name="buddy">
+     <cstring>wResWattBox</cstring>
+    </property>
    </widget>
    <widget class="QPushButton" name="btnCalc">
     <property name="geometry">
      <rect>
-      <x>315</x>
+      <x>409</x>
       <y>140</y>
-      <width>167</width>
+      <width>163</width>
       <height>112</height>
      </rect>
     </property>
@@ -160,25 +178,31 @@
    <widget class="QLabel" name="uSrc">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>150</x>
       <y>35</y>
-      <width>198</width>
-      <height>17</height>
+      <width>260</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Напряжение источника питания, от которого будет питаться светодиод&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
-     <string>Напряжение источника питания</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Напряжение источника питания (&lt;span style=&quot; font-weight:600; font-style:italic; color:#ef3638;&quot;&gt;Вольт&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>uSrcBox</cstring>
     </property>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
-      <x>-3</x>
-      <y>240</y>
-      <width>481</width>
+      <x>0</x>
+      <y>241</y>
+      <width>570</width>
       <height>20</height>
      </rect>
     </property>
@@ -189,7 +213,7 @@
    <widget class="QLabel" name="rCalc">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>233</x>
       <y>275</y>
       <width>170</width>
       <height>17</height>
@@ -198,74 +222,200 @@
     <property name="text">
      <string>Расчитанное сопротивление</string>
     </property>
+    <property name="buddy">
+     <cstring>fResLedBox</cstring>
+    </property>
    </widget>
    <widget class="QTextEdit" name="uSrcBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>440</x>
       <y>35</y>
       <width>100</width>
       <height>25</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="uLedBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>440</x>
       <y>65</y>
       <width>100</width>
       <height>25</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="iLedBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>440</x>
       <y>95</y>
       <width>100</width>
       <height>25</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="fResLedBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>440</x>
       <y>275</y>
       <width>100</width>
       <height>25</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="iAbsResBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>440</x>
       <y>305</y>
       <width>100</width>
       <height>25</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QTextEdit" name="wResWattBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>440</x>
       <y>335</y>
       <width>100</width>
       <height>25</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="lStatus">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>232</x>
       <y>149</y>
-      <width>291</width>
-      <height>91</height>
+      <width>171</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -293,11 +443,75 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>130</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Последовательно</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>130</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Параллельно</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>172</y>
+      <width>45</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>140</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Количество светодиодов и тип подключения</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
+  <tabstop>uSrcBox</tabstop>
+  <tabstop>uLedBox</tabstop>
+  <tabstop>iLedBox</tabstop>
   <tabstop>btnCalc</tabstop>
+  <tabstop>fResLedBox</tabstop>
+  <tabstop>iAbsResBox</tabstop>
+  <tabstop>wResWattBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>
